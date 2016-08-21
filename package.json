@@ -1,0 +1,16 @@
+{
+  "name": "hubr",
+  "version": "1.0.0",
+  "author": "Pontus Horn",
+  "repository": "https://github.com/PontusHorn/hubr.git",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-watch": "^4.3.9",
+    "rollup": "^0.34.10",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-watch": "^2.5.0",
+    "whatwg-fetch": "^1.0.0"
+  }
+}

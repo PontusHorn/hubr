@@ -1,0 +1,30 @@
+{% extends "layout-default.twig" %}
+
+{% block content %}
+    {{ parent() }}
+
+    <form id="githubSearchForm" class="BigOldForm" action="/url/" method="get">
+        <label for="githubURLField" class="BigOldLabel">Github URL:</label>
+        <input id="githubURLField" type="text" class="BigOldTextField" name="url" value="{{ url|e }}"
+               placeholder="e.g. github.com/foobar" autofocus>
+
+        <input id="githubSearchButton" type="submit" class="BigOldButton" value="Get info">
+    </form>
+
+    <div id="resultView" class="ResultView" {% if not user %}hidden{% endif %}>
+        <table class="ResultTable">
+            <tr>
+                <th class="ResultTableHeading">URL:</th>
+                <td class="ResultTableValue"><a href="https://{{ url|e }}" id="resultViewURL">{{ url|e }}</a></td>
+            </tr>
+            <tr>
+                <th class="ResultTableHeading">User ID:</th>
+                <td id="resultViewUserId" class="ResultTableValue">{{ user.id|e }}</td>
+            </tr>
+            <tr>
+                <th class="ResultTableHeading">Username:</th>
+                <td id="resultViewUsername" class="ResultTableValue">{{ user.username|e }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock content %}

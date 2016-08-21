@@ -1,0 +1,16 @@
+{% extends "layout-default.twig" %}
+
+{% block title %}Error - {{ parent() }}{% endblock title %}
+
+{% block content %}
+    {{ parent() }}
+
+    <img src="/images/doggo.jpg" alt="Dog looking over glasses disapprovingly while reading magazine"
+         class="RightFloater">
+
+    <h2>It's a feature, not a bug!</h2>
+    <p>If you're seeing this page, it means something went wrong. But let's not dwell on the negatives - here's a dog
+        to keep you from getting too upset about it.</p>
+
+    <p>Better return to the <a href="/">start page</a> and go from there.</p>
+{% endblock content %}
