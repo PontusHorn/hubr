@@ -1,5 +1,7 @@
 /.idea/
 /cache/*
+!/cache/.keep
 /logs/*
+!/logs/.keep
 /node_modules/
 /vendor/
